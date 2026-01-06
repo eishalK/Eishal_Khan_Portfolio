@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #666666;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #6F42C1;
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 70vh;
+    padding: 60px 10% 100px 20%;
+    background: #1a1a1a;
+    color: #ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 4.8rem;
+}
+
+.hero h2 {
+
+    font-size: 2.3rem;
+    color: #6F42C1;
+
+}
+
+.hero p {
+    margin-top: 15px;
+    line-height: 1.6;
+    max-width: 600px;
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+/* HEADINGS */
+h2 {
+    color: #1a1a1a;
+    text-align: center;
+}
+
+/* About Me Section*/
+.about {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 100px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: #6F42C1;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.7;
+    color: #444444;
+}
+
+/* Skills Section */
+.skills {
+    padding: 80px 10%;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-text {
+    flex: 1;
+    text-align: left;
+}
+
+.skills-text h2 {
+    text-align: left;
+    color: #1a1a1a;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.skills-description {
+    color: #666666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* Toggle Button */
+.skills-toggle {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.toggle-btn {
+    padding: 12px 25px;
+    border: 2px solid #6F42C1;
+    cursor: pointer;
+    font-weight: bold;
+    color: #6F42C1;
+    background: transparent;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.toggle-btn:hover {
+    background: rgba(111, 66, 193, 0.1);
+}
+
+.toggle-btn.active {
+    background: #6F42C1;
+    color: white;
+}
+
+/* Skills Grid */
+.skills-grid-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.skillCard {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    transition: transform 0.3s ease; 
+    border: 1px solid #eeeeee;   
+}
+
+.skillCard img {
+    width: 50px;
+    height: 50px;
+    transition: opacity 0.3s ease;
+}
+
+.skill-name {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.skillCard:hover .skill-name {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.skillCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+#SoftSkills .skillCard {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    padding: 12px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.hidden {
+
+    display: none;
+
+}
