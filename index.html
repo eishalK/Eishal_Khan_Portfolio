@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        
+
         <div class="skills-grid-container">
             <!--- Technical Skills --->
             <div class="skills-grid" id="TechnicalSkills">
@@ -68,11 +68,13 @@
                     <span class="skill-name">CSS3</span>
                 </div>
                 <div class="skillCard">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                    <span class="skill-name">JavaScript</span>  
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript">
+                    <span class="skill-name">JavaScript</span>
                 </div>
                 <div class="skillCard">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                        alt="React.js">
                     <span class="skill-name">React.js</span>
                 </div>
                 <div class="skillCard">
@@ -80,11 +82,13 @@
                     <span class="skill-name">C#</span>
                 </div>
                 <div class="skillCard">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python">
                     <span class="skill-name">Python</span>
                 </div>
                 <div class="skillCard">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                        alt="SQL Server">
                     <span class="skill-name">SQL Server</span>
                 </div>
             </div>
@@ -100,7 +104,102 @@
         </div>
     </section>
 
-   
+    <!--- Projects Section --->
+    <section class="projects-section" id="projects">
+        <p class="section-tag">My Work</p>
+        <h2 class="section-title">Projects</h2>
+        <p class="projects-subtitle">
+            Explore some of my projects that showcase my skills and experience in software development.
+        </p>
+
+        <div class="projects-wrapper">
+            <button class="nav-btn left" onclick="slideLeft()">&#10094;</button>
+
+            <div class="projects-slider" id="projectSlider">
+                <div class="project-card" onclick="openProject('project1')">
+                    <span class="project-tag">View Details</span>
+                    <img src="img/Healthcare_Website.png"
+                        alt="HealthCare_Website">
+               
+                </div>    
+                <div class="project-card" onclick="openProject('project2')">
+                    <span class="project-tag">View Details</span>
+                    <img src="img/BlackJack_game.PNG"
+                        alt="BlackJack_Game">
+               
+                </div>     
+
+                <div class="project-card" onclick="openProject('project3')">
+                    <span class="project-tag">View Details</span>
+                    <img src="img/Soccer_game.PNG"
+                        alt="Soccer_Board_Game">
+               
+                </div>   
+
+                <div class="project-card" onclick="openProject('project4')">
+                    <span class="project-tag">View Details</span>
+                    <img src="img/Chrome_Extension.png"
+                        alt="Chrome_Extension">
+               
+                </div>   
+            </div>
+            <button class="nav-btn right" onclick="slideRight()">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-section">
+            <h3 class="contact-tag">Contact</h3>
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-description">
+                Feel free to get in touch if you’d like to collaborate, discuss a project, or have any questions. I am
+                always open to new opportunities and meaningful conversations.
+            </p>
+           <a href="https://wa.me/923377040319" target="_blank" class="say-hello-btn">Say Hello</a>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+            <div class="social-icons">
+                <a href="mailto:eishalkhan185@gmail.com" class="icon-circle" title="Gmail">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/eishal-khan-59356a307/" target="_blank" class="icon-circle"
+                    title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com/eishalK" target="_blank" class="icon-circle" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>Thank you for visiting my portfolio!</p>
+    </section>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Title</h2>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left">
+                    <img src="" id="modalImage" alt="Project Preview">
+                </div>
+                <div class="modal-right">
+                    <h3>Project Link</h3>
+                    <a href="#" id="modalGithub" target="_blank">View On GitHub</a>
+                    <h3>About The Project</h3>
+                    <p id="modalDescription"></p>
+                    <h3>Skills</h3>
+                    <div class="modal-skills" id="modalSkills"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 

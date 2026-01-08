@@ -31,7 +31,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #6F42C1;
+    color: #ff4824;
     transform: scale(1.1);
     border-radius: 5px;
 }
@@ -58,7 +58,7 @@ body {
 .hero h2 {
 
     font-size: 2.3rem;
-    color: #6F42C1;
+    color: #ff4824;
 
 }
 
@@ -86,7 +86,7 @@ h2 {
 
 .about h2 {
     margin-bottom: 20px;
-    color: #6F42C1;
+    color: #ff4824;
 }
 
 .about p {
@@ -101,12 +101,12 @@ h2 {
 /* Skills Section */
 .skills {
     padding: 80px 10%;
-    max-width: 1300px;
     margin: auto;
     display: flex;
     gap: 60px;
     align-items: center;
     justify-content: space-between;
+    background-color: #f7f7f7;
 }
 
 .skills-text {
@@ -136,21 +136,21 @@ h2 {
 
 .toggle-btn {
     padding: 12px 25px;
-    border: 2px solid #6F42C1;
+    border: 2px solid #ff4824;
     cursor: pointer;
     font-weight: bold;
-    color: #6F42C1;
+    color: #ff4824;
     background: transparent;
     transition: 0.3s;
     border-radius: 5px;
 }
 
 .toggle-btn:hover {
-    background: rgba(111, 66, 193, 0.1);
+    background: rgba(193, 106, 87, 0.1);
 }
 
 .toggle-btn.active {
-    background: #6F42C1;
+    background: #ff4824;
     color: white;
 }
 
@@ -164,10 +164,11 @@ h2 {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     justify-content: center;
     gap: 20px;
     width: 100%;
+    max-width: 600px;
 }
 
 .skillCard {
@@ -228,7 +229,280 @@ h2 {
 }
 
 .hidden {
-
     display: none;
+}
 
+/* Projects Section */
+.projects-section{
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+.section-title{
+    font-size: 3rem;
+    margin: 10px;
+    color: #1a1a1a;
+}   
+
+.projects-subtitle{
+    margin-bottom: 50px;
+    color: #666666;
+    font-size: 1.1rem;
+}
+
+.projects-wrapper{
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.projects-slider{
+    display: flex;
+    gap: 30px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 20px;
+
+}
+
+.project-card{
+    min-width: 360px;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.project-card img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-12px); 
+    border-color: #ff4824;
+    box-shadow: 0 15px 35px rgba(111, 66, 193, 0.2); 
+}
+
+.nav-btn{
+    background: white;
+    border: 2px solid #ff4824;
+    color: #ff4824;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+}
+
+.nav-btn:hover{
+    background: #ff4824;
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 87, 51, 0.3);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-header {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-body {
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+}
+
+.modal-left img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.modal-right h3 { 
+    margin-bottom: 10px; 
+    color: #1a1a1a; 
+}
+
+.modal-header h2{
+    color: #ff4824;
+}
+
+#modalGithub { color: #ff4824; 
+    font-weight: bold; 
+    text-decoration: none; 
+    display: block; 
+    margin-bottom: 20px; 
+}
+
+.project-card{
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.skill-tag {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Projects Responsive style */
+@media (max-width: 768px) {
+
+    .project-card {
+        min-width: 280px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .nav-btn {
+        padding: 8px 12px;
+        font-size: 18px;
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-tag {
+    color: #ff4824;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contact-title {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+}
+
+.contact-description {
+    color: #666666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.say-hello-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #ff4824;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(111, 66, 193, 0.3);
+    margin-bottom: 50px;
+    margin-top: 30px;
+    
+}
+
+.say-hello-btn:hover {
+    transform: translateY(-5px);
+    background-color: #fa5533;
+    box-shadow: 0 8px 20px rgba(255, 87, 51, 0.4);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon-circle {
+    width: 55px;
+    height: 55px;
+    background-color: #1a1a1a; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.icon-circle i {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.icon-circle:hover {
+    background-color: #ff4824;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2.2rem;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 1rem;
 }
