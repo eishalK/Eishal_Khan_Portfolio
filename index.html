@@ -29,11 +29,55 @@
     <!--- About Me Section --->
     <section class="about" id="about">
         <h2>About Me</h2>
-        <p>I am a Computer Science student at Muhammad Ali Jinnah University with a strong interest in web development.
-            I enjoy learning new technologies and applying them to real-world problems through practical
-            projects. Currently, I am developing my skills in modern web technologies, data analysis, and software
-            development with a focus on building efficient and user-friendly solutions. My career goal is to grow as a
-            skilled software developer and work on impactful projects that solve meaningful problems.</p>
+
+        <div class="about-toggle">
+            <button class="about-btn active" onclick="toggleAbout('aboutMe')">About Me</button>
+            <button class="about-btn" onclick="toggleAbout('education')">Education</button>
+            <button class="about-btn" onclick="toggleAbout('experience')">Experience</button>
+        </div>
+
+        <div class="about-content-wrapper">
+            <div id="aboutMe" class="about-content">
+                <p>I am a Computer Science student at Muhammad Ali Jinnah University with a strong interest in web
+                    development.
+                    I enjoy learning new technologies and applying them to real-world problems through practical
+                    projects. Currently, I am developing my skills in modern web technologies, data analysis, and
+                    software
+                    development with a focus on building efficient and user-friendly solutions. My career goal is to
+                    grow as a
+                    skilled software developer and work on impactful projects that solve meaningful problems.
+                </p>
+            </div>
+
+            <div id="education" class="about-content hidden">
+                <div class="info-item">
+                <h3>Muhammad Ali Jinnah University</h3>
+                <p>Bachelor of Science in Computer Science | 2023 - Present</p>
+
+                <h3>GOVT. COLLEGE, SHAHRAH-E-LIAQUAT</h3>
+                <p>Pre-Engineering Intermediate | 2020 - 2022</p>
+
+                <h3>ST. PAUL ENGLISH HIGHSCHOOL</h3>
+                <p>Science Matriculation | 2018 - 2020</p>
+                </div>
+            </div>
+
+            <div id="experience" class="about-content hidden">
+                <div class="info-item">
+                <h3>Software Development Intern</h3>
+                <p>HABIBMETRO | Jul 29, 2024 - Sep 10, 2024</p>
+                <p>Designed responsive and user-friendly interfaces using Figma, improving UI/UX consistency across projects.</p> 
+                <p>Enhanced database interactions by indexing critical tables and restructuring SQL queries for better 
+                    performance and reduced latency.
+                </p>
+                <p>Designed and developed a fully responsive Hospital Management System webpage using HTML, CSS, and 
+                    JavaScript, incorporating interactive animations to enhance usability and overall user experience. </p>
+                </p>  
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
     <!--- Skills Section --->
@@ -118,67 +162,38 @@
             <div class="projects-slider" id="projectSlider">
                 <div class="project-card" onclick="openProject('project1')">
                     <span class="project-tag">View Details</span>
-                    <img src="img/Healthcare_Website.png"
-                        alt="HealthCare_Website">
-               
-                </div>    
+                    <img src="img/Healthcare_Website.png" alt="HealthCare_Website">
+
+                </div>
                 <div class="project-card" onclick="openProject('project2')">
                     <span class="project-tag">View Details</span>
-                    <img src="img/BlackJack_game.PNG"
-                        alt="BlackJack_Game">
-               
-                </div>     
+                    <img src="img/BlackJack_game.PNG" alt="BlackJack_Game">
+
+                </div>
 
                 <div class="project-card" onclick="openProject('project3')">
                     <span class="project-tag">View Details</span>
-                    <img src="img/Soccer_game.PNG"
-                        alt="Soccer_Board_Game">
-               
-                </div>   
+                    <img src="img/MeetingAgent.jpeg" alt="Meeting_Agent">
+
+                </div>
 
                 <div class="project-card" onclick="openProject('project4')">
                     <span class="project-tag">View Details</span>
-                    <img src="img/Chrome_Extension.png"
-                        alt="Chrome_Extension">
-               
-                </div>   
+                    <img src="img/Soccer_game.PNG" alt="Soccer_Board_Game">
+
+                </div>
+
+                <div class="project-card" onclick="openProject('project5')">
+                    <span class="project-tag">View Details</span>
+                    <img src="img/Chrome_Extension.png" alt="Chrome_Extension">
+
+                </div>
             </div>
             <button class="nav-btn right" onclick="slideRight()">&#10095;</button>
         </div>
     </section>
 
-    <section class="contact" id="contact">
-        <div class="contact-section">
-            <h3 class="contact-tag">Contact</h3>
-            <h2 class="contact-title">Get In Touch</h2>
-            <p class="contact-description">
-                Feel free to get in touch if you’d like to collaborate, discuss a project, or have any questions. I am
-                always open to new opportunities and meaningful conversations.
-            </p>
-           <a href="https://wa.me/923377040319" target="_blank" class="say-hello-btn">Say Hello</a>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-            <div class="social-icons">
-                <a href="mailto:eishalkhan185@gmail.com" class="icon-circle" title="Gmail">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-
-                <a href="https://www.linkedin.com/in/eishal-khan-59356a307/" target="_blank" class="icon-circle"
-                    title="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-
-                <a href="https://github.com/eishalK" target="_blank" class="icon-circle" title="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="footer">
-        <p>Thank you for visiting my portfolio!</p>
-    </section>
-
+    <!-- Modal for Project Details -->
     <div id="projectModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -200,6 +215,39 @@
             </div>
         </div>
     </div>
+
+    <section class="contact" id="contact">
+        <div class="contact-section">
+            <h3 class="contact-tag">Contact</h3>
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-description">
+                Feel free to get in touch if you’d like to collaborate, discuss a project, or have any questions. I am
+                always open to new opportunities and meaningful conversations.
+            </p>
+            <a href="https://wa.me/923377040319" target="_blank" class="say-hello-btn">Say Hello</a>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+            <div class="social-icons">
+                <a href="#" class="icon-circle" id="gmailBtn" title="Gmail">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/eishal-khan-59356a307/" target="_blank" class="icon-circle"
+                    title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com/eishalK" target="_blank" class="icon-circle" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>Thank you for visiting my portfolio!</p>
+    </section>
+
     <script src="script.js"></script>
 </body>
 

@@ -1,3 +1,25 @@
+// About me Section Toggle Functionality
+function toggleAbout(type) {
+    const contents = document.querySelectorAll('.about-content');
+    const buttons = document.querySelectorAll('.about-btn');
+
+    // This hides all content blocks
+    contents.forEach(content => {
+
+        content.classList.add('hidden')
+
+    });
+
+    // This removes the active class from all buttons
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    document.getElementById(type).classList.remove('hidden');
+    event.currentTarget.classList.add('active');
+
+}
+
 // Skill Section Toggle Functionality
 function toggleSkills(type) {
     const techGrid = document.getElementById('TechnicalSkills');
@@ -63,6 +85,14 @@ const projectData = {
     },
 
     project3: {
+        title: "Meeting Agent",
+        image: "img/MeetingAgent.jpeg",
+        github: "https://github.com/safiyah-asif/Meeting-Agent",
+        description: "MeetingAgent is an AI-powered meeting assistant built with streamlit, OpenAI_Router, and OpenAI that helps users schedule, reschedule, update, cancel meetings, and view upcoming calendar events through a conversational interface.",
+        skills: ["Python", "Streamlit", "OpenAI", "APIs"]
+    },
+
+    project4: {
         title: "Soccer Board Game",
         image: "img/Soccer_game.PNG",
         github: "https://github.com/eishalK/Soccer-Board-game",
@@ -70,7 +100,7 @@ const projectData = {
         skills: ["JavaScript", "HTML", "CSS", "Game Logic"]
     },
 
-    project4: {
+    project5: {
         title: "Chrome Extension",
         image: "img/Chrome_Extension.png",
         github: "https://github.com/eishalK/Chrome_Extension",
@@ -98,17 +128,26 @@ function openProject(projectId) {
     });
 
     modal.style.display = "block";
-    document.body.style.overflow = "hidden"; 
+    document.body.style.overflow = "hidden";
 }
 
-document.querySelector(".close-btn").onclick = function() {
+document.querySelector(".close-btn").onclick = function () {
     modal.style.display = "none";
-    document.body.style.overflow = "auto"; 
+    document.body.style.overflow = "auto";
 }
 
 window.onclick = (e) => {
     if (e.target == modal) {
         modal.style.display = "none";
-        document.body.style.overflow = "auto"; 
+        document.body.style.overflow = "auto";
     }
 }
+
+// Contact Me Button
+document.getElementById("gmailBtn").addEventListener("click", function () {
+
+    window.open(
+        "https://mail.google.com/mail/?view=cm&fs=1&to=eishalkhan185@gmail.com",
+        "_blank"
+    );
+});
